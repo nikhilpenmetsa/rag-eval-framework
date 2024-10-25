@@ -1,0 +1,3 @@
+﻿gt_id,app_name,question,ground_truth
+gt_1,SampleApp1,"How does the Company determine if an arrangement qualifies as a lease?","The Company determines if an arrangement is a lease at inception."
+gt_2,SampleApp1,What is the Company's policy regarding the recognition of right-of-use (ROU) assets and lease liabilities for short-term leases?,"The Company has elected not to recognize ROU assets and lease liabilities for short-term leases that have a lease term of 12 months or less. The Company recognizes the lease payments associated with its short-term leases as an expense on a straight-line basis over the lease term."
