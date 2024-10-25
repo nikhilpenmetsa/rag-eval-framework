@@ -10,7 +10,6 @@ Code in this repository provides a RAG evaluation solution using the Ragas frame
 The solutions uses AWS Step Functions to orchestrate the evaluation in both modes. When run in Benchmark mode, multiple configurations such as different temperatures can be evaluated against one another. When run in validation mode, the evaluation metrics are compared against pre-defined thresholds. Metrics from evaluation in both modes are persisted in S3 using Kinesis Firehose. Athena is used to query these metrics for visualization and reporting.
 
 ## Evaluation Flow
-
 ![EvaluationFlow-Page-1](EvaluationFlow-Page-1.png)
 
 ## Deployment overview
@@ -18,6 +17,10 @@ This solution is deployed in 3 stacks
 1. The RAG evaluation framework stack. 
 1. A sample application stack. This stack contains 1/SSM parameter which defines the threshold metrics for this application, 2/A csv file that has ground truth data 3/A Bedrock Knowledgebase. The data indexed in this KB and the ground truth are synthetic data for a 10K filing of a fictious company
 1. A reporting stack. This stack deploys an EC2 instance that runs a streamlit application. This streamlit application provides simple UI to analyze the evaluation metrics for various runs.
+
+## Sample evaluation report
+![Evaluation report](visualization.png)
+
 
 ## Deployment steps
 1. Deploy the evaluation framework stack - `cdk deploy EvalAppFrameworkStack`
